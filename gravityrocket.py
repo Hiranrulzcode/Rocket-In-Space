@@ -14,7 +14,7 @@ object_rocket=pygame.image.load("Pro Python Game Development 2/rocket in space/r
 bg=pygame.image.load("Pro Python Game Development 2/rocket in space/space.png")
 
 run=True
-while run:
+while object_y<600:
     screen.blit(bg,(0,0))
     screen.blit(object_rocket,(object_x,object_y))
     pygame.display.update()
@@ -50,14 +50,20 @@ while run:
                 keys[3]=False
     
     if keys[0]:
-        object_y=object_y-10
+        object_y=object_y-8
     
     if keys[1]:
-        object_x=object_x-10
+        object_x=object_x-8
     
     if keys[2]:
-        object_y=object_y+10
+        object_y=object_y+8
     
     if keys[3]:
-        object_x=object_x+10
+        object_x=object_x+8
+    
+
+    object_y=object_y+3
+
+
+print("Game Over")
             
